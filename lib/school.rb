@@ -5,8 +5,8 @@ class School
   def initialize(name)
     @name = name
     @roster = {}
-  end 
-  
+  end
+
   def add_student(name, grade)
     roster[grade] || []
     roster[grade] << name
@@ -16,11 +16,11 @@ class School
     roster[grade]
   end
 
-  def sort 
+  def sort
     sorter = {}
     roster.each do |grade, name|
       sorted[grade] = name.sort
     end
     sorted
-  end  
+  end
 end 
